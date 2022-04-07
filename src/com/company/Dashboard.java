@@ -135,11 +135,11 @@ public class Dashboard extends JFrame implements ActionListener {
             } catch (Exception e) {}
         } else if (ae.getSource() == findGuideButton) {
             new FindGuide().setVisible(true);
-            this.setVisible(false);
+            //this.setVisible(false);
         } else if (ae.getSource() == guideLeaderboardButton) {
-
+           // new GuideLeaderboard();
         } else if (ae.getSource() == touristLeaderboardButton) {
-
+           // new TouristLeaderboard();
         } else if (ae.getSource() == contactUsButton) {
             new Contact(username).setVisible(true);
             this.setVisible(false);

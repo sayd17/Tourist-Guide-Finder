@@ -31,13 +31,13 @@ public class UpdateProfile extends JFrame implements ActionListener {
 
 
         JLabel nameLabel = new JLabel("Name");
-        nameLabel.setBounds(380, 180, 240, 40);
+        nameLabel.setBounds(380, 190, 240, 40);
         nameLabel.setForeground(Color.WHITE);
         nameLabel.setFont(new Font("Tahoma", Font.PLAIN, 30));
         totalLabel.add(nameLabel);
 
         nameArea = new JTextField();
-        nameArea.setBounds(680, 185, 500, 30);
+        nameArea.setBounds(680, 200, 500, 30);
         nameArea.setFont(new Font("Tahoma", Font.PLAIN, 20));
         nameArea.setBackground(Color.WHITE);
         nameArea.setForeground(new Color(255, 128, 0));
