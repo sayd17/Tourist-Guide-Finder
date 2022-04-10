@@ -1,5 +1,6 @@
 package com.company;
 
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -134,10 +135,13 @@ public class Dashboard extends JFrame implements ActionListener {
                 this.setVisible(false);
             } catch (Exception e) {}
         } else if (ae.getSource() == findGuideButton) {
-            new FindGuide().setVisible(true);
-            //this.setVisible(false);
+            new MySearchGUI().setVisible(true);
+            //this.setVisible(true);
+
         } else if (ae.getSource() == guideLeaderboardButton) {
            // new GuideLeaderboard();
+            new FindGuide().setVisible(true);
+            this.setVisible(true);
         } else if (ae.getSource() == touristLeaderboardButton) {
            // new TouristLeaderboard();
         } else if (ae.getSource() == contactUsButton) {

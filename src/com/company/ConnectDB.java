@@ -9,7 +9,7 @@ import java.sql.Statement;
 
 public class ConnectDB {
     Connection c;
-    Statement s;
+    public Statement s;
     public ConnectDB(){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");

@@ -10,7 +10,7 @@ public class SignUp extends JFrame implements ActionListener {
     JTextField nameArea, emailPhoneArea, usernameArea, numberArea;
     Choice choice1;
     JPasswordField  passwordArea;
-    SignUp(){
+    public SignUp(){
 
         setExtendedState(JFrame.MAXIMIZED_BOTH); // MAXIMIZED_BOTH it will adjust Panel with Screen
         setLayout(null);
@@ -179,7 +179,7 @@ public class SignUp extends JFrame implements ActionListener {
                     JOptionPane.showMessageDialog(null, "Account Created Successfully.");
 
                     this.setVisible(false);
-                    new SignIn().setVisible(true);
+                    new Dashboard(username).setVisible(true);
                 }
 
             }

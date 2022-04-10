@@ -73,7 +73,7 @@ public class SignIn extends JFrame implements ActionListener{
         signUpButton.addActionListener(this);
         totalLabel.add(signUpButton);
 
-        forgetPasswordButton = new JButton("Forget Password");
+        forgetPasswordButton = new JButton("Admin Login");
         forgetPasswordButton.setBounds(800, 520, 150, 40);
         forgetPasswordButton.setBackground(Color.WHITE);
         forgetPasswordButton.setForeground(new Color(255, 128, 0));
