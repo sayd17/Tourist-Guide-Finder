@@ -153,7 +153,7 @@ public class SignUp extends JFrame implements ActionListener {
             String lenCountry = "Blank";
             String lenAddress = "Blank";
 
-            String query = "insert into account(username, name, emailPhone, password, nidPassport, choice) values('"+username+"', '"+name+"', '"+emailPhone+"', '"+password+"' , '"+nidPassport+"', '"+choice+"' )";
+            String query = "insert into account(username, name, emailPhone, password, nidPassport, choice, rating, ratingCounter) values('"+username+"', '"+name+"', '"+emailPhone+"', '"+password+"' , '"+nidPassport+"', '"+choice+"', '0.0', '0' )";
             try{
                 if(lenName == 0){
                     JOptionPane.showMessageDialog(null, "Please fill the name.");

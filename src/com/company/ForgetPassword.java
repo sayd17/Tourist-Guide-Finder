@@ -1,9 +1,11 @@
 package com.company;
 
+import com.company.ui.AdminDashboard;
+
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class ForgetPassword extends JFrame implements ActionListener{
     JButton sendButton, backButton;
@@ -14,15 +16,15 @@ public class ForgetPassword extends JFrame implements ActionListener{
         setExtendedState(JFrame.MAXIMIZED_BOTH); // MAXIMIZED_BOTH it will adjust Panel with Screen
         setLayout(null);
 
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("com/company/icons/hotel10.jpg"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("com/company/icons/pic2.jpg"));
         Image i2 = i1.getImage().getScaledInstance(1920, 1080, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel totalLabel = new JLabel(i3);
         totalLabel.setBounds(0, 0, 1920, 1080);
         add(totalLabel);
 
-        JLabel headingLabel = new JLabel("              Admin Login Page");
-        headingLabel.setBounds(300, 180, 1100, 80);
+        JLabel headingLabel = new JLabel("Admin Login");
+        headingLabel.setBounds(650, 180, 1100, 80);
         headingLabel.setForeground(Color.WHITE);
         headingLabel.setFont(new Font("Tahoma", Font.PLAIN, 65));
         totalLabel.add(headingLabel);
@@ -76,14 +78,13 @@ public class ForgetPassword extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent ae){
         if(ae.getSource() == sendButton){
             //new SignIn().setVisible(true);
-            //this.setVisible(false);
-            try {
-                ConnectDB c = new ConnectDB();
-                //c.s.executeUpdate(data);
-                //JOptionPane.showMessageDialog(null, "Already sent a code on your address.");
-                //this.setVisible(false);
-            } catch (Exception e) {
-                e.printStackTrace(); // To check exception
+            //this.setVisible(false)
+            System.out.println("OK");
+            String username = usernameArea.getText();
+            String password = passwordField.getText();
+            if(username.equals("admin") && password.equals("1234") ){
+                new AdminDashboard().setVisible(true);
+
             }
         }
         else  if(ae.getSource() == backButton){

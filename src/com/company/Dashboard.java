@@ -11,7 +11,7 @@ public class Dashboard extends JFrame implements ActionListener {
     JButton profileButton, findGuideButton, guideLeaderboardButton, touristLeaderboardButton, contactUsButton, logoutButton;
     String username;
 
-    Dashboard(String username) {
+    public Dashboard(String username) {
         this.username = username;
         setExtendedState(JFrame.MAXIMIZED_BOTH); // MAXIMIZED_BOTH it will adjust Panel with Screen
         setLayout(null);
@@ -54,7 +54,7 @@ public class Dashboard extends JFrame implements ActionListener {
         findGuideButton.addActionListener(this);
         featurePanel.add(findGuideButton);
 
-        guideLeaderboardButton = new JButton("Guide Leaderboard");
+        /*guideLeaderboardButton = new JButton("Guide Leaderboard");
         guideLeaderboardButton.setBackground(new Color(51, 51, 51));
         guideLeaderboardButton.setFont(new Font("Tahoma", Font.BOLD, 20));
         guideLeaderboardButton.setForeground(Color.WHITE);
@@ -70,13 +70,13 @@ public class Dashboard extends JFrame implements ActionListener {
         touristLeaderboardButton.setBounds(0, 120, 300, 40);
         touristLeaderboardButton.setMargin(new Insets(0, 0, 0, 77));
         //b3.setBorder(BorderFactory.createEmptyBorder());
-        featurePanel.add(touristLeaderboardButton);
+        featurePanel.add(touristLeaderboardButton);*/
 
         contactUsButton = new JButton("Contact US");
         contactUsButton.setBackground(new Color(51, 51, 51));
         contactUsButton.setFont(new Font("Tahoma", Font.BOLD, 20));
         contactUsButton.setForeground(Color.WHITE);
-        contactUsButton.setBounds(0, 160, 300, 40);
+        contactUsButton.setBounds(0, 80, 300, 40);
         contactUsButton.setMargin(new Insets(0, 0, 0, 170));
         contactUsButton.addActionListener(this);
         //b3.setBorder(BorderFactory.createEmptyBorder());
@@ -86,14 +86,14 @@ public class Dashboard extends JFrame implements ActionListener {
         logoutButton.setBackground(new Color(51, 51, 51));
         logoutButton.setFont(new Font("Tahoma", Font.BOLD, 20));
         logoutButton.setForeground(Color.WHITE);
-        logoutButton.setBounds(0, 200, 300, 40);
+        logoutButton.setBounds(0, 120, 300, 40);
         logoutButton.setMargin(new Insets(0, 0, 0, 210));
         //b3.setBorder(BorderFactory.createEmptyBorder());
         logoutButton.addActionListener(this);
         featurePanel.add(logoutButton);
 
 
-        ImageIcon backgroundImage = new ImageIcon(ClassLoader.getSystemResource("com/company/icons/home.jpg"));
+        ImageIcon backgroundImage = new ImageIcon(ClassLoader.getSystemResource("com/company/icons/pic3.jpg"));
         Image i2 = backgroundImage.getImage().getScaledInstance(1920, 1080, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l1 = new JLabel(i3);
@@ -114,13 +114,13 @@ public class Dashboard extends JFrame implements ActionListener {
 
         JLabel purposeLabel1 = new JLabel("Our purpose is to help tourist to find");
         purposeLabel1.setBounds(430, 365, 1000, 60);
-        purposeLabel1.setForeground(new Color(255, 128, 0));
+        purposeLabel1.setForeground(Color.WHITE);
         purposeLabel1.setFont(new Font("Tahoma", Font.PLAIN, 58));
         l1.add(purposeLabel1);
 
         JLabel purposeLabel2 = new JLabel("reliable tour guide around the world");
         purposeLabel2.setBounds(435, 430, 1000, 70);
-        purposeLabel2.setForeground(new Color(255, 128, 0));
+        purposeLabel2.setForeground(Color.WHITE);
         purposeLabel2.setFont(new Font("Tahoma", Font.PLAIN, 58));
         l1.add(purposeLabel2);
 
@@ -135,7 +135,7 @@ public class Dashboard extends JFrame implements ActionListener {
                 this.setVisible(false);
             } catch (Exception e) {}
         } else if (ae.getSource() == findGuideButton) {
-            new MySearchGUI().setVisible(true);
+            new MySearchGUI(username).setVisible(true);
             //this.setVisible(true);
 
         } else if (ae.getSource() == guideLeaderboardButton) {
